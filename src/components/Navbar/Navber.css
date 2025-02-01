@@ -1,3 +1,4 @@
+/* ナビゲーションバーの基本スタイル */
 nav {
     background-color: #d69a3f;
     color: white;
@@ -5,6 +6,96 @@ nav {
     font-weight: 600;
     font-size: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    /* 左側に並べる */
     align-items: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* 左側のアイコンとタイトル */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* アイコン間に少し余白を追加 */
+}
+
+/* ホームアイコンとお気に入りアイコン */
+.home-icon,
+.favorite-icon {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ホバー時のエフェクト */
+.home-icon:hover,
+.favorite-icon:hover {
+    color: #ffe4b5;
+}
+
+/* 検索ボタンとフォームをまとめるコンテナ */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    /* 右端に配置 */
+    right: 20px;
+    /* 右端に余白を確保 */
+}
+
+/* 検索ボタン */
+.search-button {
+    padding: 5px 10px;
+    background-color: white;
+    color: #d69a3f;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-button:hover {
+    background-color: #ffe4b5;
+}
+
+/* 検索フォーム */
+.search-form {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 1000;
+}
+
+.search-form input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    background-color: #d69a3f;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-form button:hover {
+    background-color: #b3782b;
 }

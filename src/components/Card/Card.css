@@ -1,4 +1,6 @@
 .card {
+    position: relative;
+    /* ⭐️ マークを右上に配置するため */
     width: 290px;
     box-shadow: 2px 8px 21px -2px #777777;
     border-radius: 10px;
@@ -14,4 +16,19 @@
 
 .cardInfo {
     text-align: center;
+}
+
+/* ⭐️ お気に入りボタン */
+.favorite-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s ease;
+}
+
+.favorite-mark:hover {
+    color: gold;
 }
